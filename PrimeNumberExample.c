@@ -1,24 +1,29 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int* RangeArray(N,M){
     int size=M-N+1;
     int *Array=(int*)malloc(size*sizeof(int));
 
-    if (Array=NULL){
+    if (Array==NULL){
         printf("Memory allocation failed/n");
         exit(1);
     }
-
+    else{
     for (int i=0; i<=size ; i++){
-        Array=N;
+        Array[i]=N;
         
         N++;
     }
 
     for (int j=0; j<size; j++){
-        printf("%d",Array[j]);
+        printf("%d\n",Array[j]);
+
     }
+    
     return Array;
+}
+
 }
 
 // int FindPrimeNumber(){
