@@ -1,9 +1,8 @@
-wordlist=[]
 lengthlist=[]
 trash=[]
 
-def LengthOrder(wordlist2,Number2):
-    wordlist2=[]
+def LengthOrder(wordlist2, Number2):
+    count = 0 
     length1=0
     wordlistbyorder=[]
     ##test##
@@ -21,7 +20,7 @@ def LengthOrder(wordlist2,Number2):
             
         
         
-        return wordlistbyorder
+    return wordlist2
     
 while True:
     Number = input('Enter the desired number')
@@ -29,6 +28,7 @@ while True:
     try:
         Number = int(Number)
         if (type(Number)==int):
+            wordlist=[]
             break
     except ValueError:
         print("Error: Input should be an integer")
@@ -36,15 +36,15 @@ while True:
 for i in range(0,Number):
     word=input('Enter word you want and the length of word must be less than or equal to 50')
     word=word.lower()
+    print(word)
     if len(word) <= 50:
         wordlist.append(word)
+        print(wordlist)
     else :
         trash.append(word)
 
-wordlist=LengthOrder(wordlist2=wordlist,Number2=Number)
+wordlist=LengthOrder(wordlist2=wordlist, Number2=Number)
 print(wordlist)
-
-    
        
 print(wordlist) # Check what strings are in wordlist
 
